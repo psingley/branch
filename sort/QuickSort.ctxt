@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=list
+comment0.target=QuickSort(list.List)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ QuickSort\r\n
+comment1.params=
+comment1.target=void\ sort()
+comment2.params=start\ end
+comment2.target=void\ qSort(int,\ int)
+comment3.params=start\ end
+comment3.target=int\ partition(int,\ int)
+comment3.text=\r\n\ @return\ pivot\ position,\ P\r\n\ @Post\:\ All\ values\ left\ of\ P\ are\ <\ pivotValue\ and\ all\ values\ right\ of\ P\ are\ >\=\ pivotValue.\r\n
+numComments=4

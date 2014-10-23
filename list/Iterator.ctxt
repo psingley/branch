@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=
+comment0.target=boolean\ hasNext()
+comment0.text=\r\n\ @return\ true\ only\ if\ there\ are\ more\ elements\ that\ we\ haven't\ seen\ yet.\r\n
+comment1.params=
+comment1.target=java.lang.Object\ next()
+comment1.text=\r\n\ @return\ value\ of\ the\ next\ element\r\n\ precondition\:\ hasNext()\ is\ true\r\n
+comment2.params=
+comment2.target=void\ remove()
+comment2.text=\r\n\ pre\:\ next()\ has\ been\ called\ and\ remove()\ has\ not\ been\ called\ since\ the\ last\ call\ to\ next().\r\n
+comment3.params=
+comment3.target=boolean\ hasTwoMore()
+comment3.text=@return\ true\ only\ if\ there\ are\ at\ least\ two\ more\ elements\ in\ the\ List\ being\ iterated\ thru
+comment4.params=
+comment4.target=void\ remove2()
+comment4.text=\ Remove\ two\ elements\ from\ the\ List,\r\n\ \ the\ most\ recent\ obtained\ by\ a\ call\ to\r\n\ \ next()\ and\ the\ element\ following\ that.\r\n\ \ Pre\:\ There\ are\ two\ such\ elements\ which\ \r\n\ \ can\ be\ removed.\r\n
+numComments=5

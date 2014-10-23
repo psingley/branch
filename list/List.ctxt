@@ -1,0 +1,49 @@
+#BlueJ class context
+comment0.params=
+comment0.target=int\ size()
+comment0.text=\ @return\ size\ of\ the\ List.\r\n
+comment1.params=value
+comment1.target=void\ add(java.lang.Object)
+comment1.text=\ Add\ a\ value\ at\ the\ end\ of\ this\ list\r\n
+comment10.params=
+comment10.target=java.lang.String\ toString()
+comment10.text=\ @return\ the\ elements\ of\ this\ List\ as\ a\ String\ \ enclosed\ in\ square\ brackets\:\r\n\ \ \ \ [a,b,c]\r\n
+comment11.params=other
+comment11.target=boolean\ equals(java.lang.Object)
+comment11.text=@return\ true\ only\ if\ this\ List\ is\ equal\ to\ the\ parameter,\ other
+comment12.params=
+comment12.target=Iterator\ iterator()
+comment13.params=
+comment13.target=boolean\ hasDuplicate()
+comment13.text=@return\ true\ if\ this\ List\ contains\ at\ least\ two\ equal\ elements
+comment14.params=
+comment14.target=ListIterator\ listIterator()
+comment14.text=\r\n\ @return\ a\ ListIterator\ for\ this\ List\r\n
+comment15.params=ndx
+comment15.target=ListIterator\ listIterator(int)
+comment15.text=\r\n\ @return\ a\ ListIterator\ with\ ndx\ as\ cursor\ starting\ position\r\n\ Pre\:\ 0<\=ndx<\=size\r\n
+comment2.params=ndx\ value
+comment2.target=void\ add(int,\ java.lang.Object)
+comment2.text=\ Insert\ the\ value\ at\ position\ ndx\ (Index/Position)\ in\ this\ List.\r\n\ @param\ 0\ <\=\ ndx\ <\=\ size\r\n
+comment3.params=ndx
+comment3.target=java.lang.Object\ get(int)
+comment3.text=\ @return\ value\ at\ the\ given\ position.\r\n\ @param\ 0\ <\=\ ndx\ <\ size\r\n
+comment4.params=ndx\ value
+comment4.target=java.lang.Object\ set(int,\ java.lang.Object)
+comment4.text=\ @returns\ the\ old\ value\ at\ ndx\r\n\ change\ the\ value\ at\ position\ ndx\ to\ given\ value.\r\n\ @param\ 0\ <\=\ ndx\ <\ size\r\n
+comment5.params=ndx
+comment5.target=java.lang.Object\ remove(int)
+comment5.text=\ Remove\ value\ at\ given\ position\r\n\ @Returns\ value\ removed\r\n\ @param\ 0\ <\=\ ndx\ <\ size\r\n
+comment6.params=
+comment6.target=void\ clear()
+comment6.text=\ Makes\ the\ list\ empty\r\n
+comment7.params=
+comment7.target=boolean\ isEmpty()
+comment7.text=\ @returns\ true\ only\ if\ this\ list\ is\ empty\r\n
+comment8.params=value
+comment8.target=int\ indexOf(java.lang.Object)
+comment8.text=@return\ the\ postion\ of\ the\ first\ occurrence\ of\ the\ value\ in\ this\ List,\ or\ -1\ if\ not\ found
+comment9.params=value
+comment9.target=boolean\ contains(java.lang.Object)
+comment9.text=@return\ true\ only\ if\ value\ is\ contained\ in\ this\ List
+numComments=16

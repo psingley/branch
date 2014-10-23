@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Quiz3P2()
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Quiz3P2\r\n
+comment1.params=x\ y
+comment1.target=void\ part1(int,\ int)
+comment2.params=
+comment2.target=int\ part2()
+comment3.params=x\ y
+comment3.target=int\ divide(int,\ int)
+comment3.text=\ @return\ the\ quotient\ of\ a/b\ \ \ \ \ \r\n\ \ \ \ @param\ a\ and\ b\ are\ positive\r\n
+numComments=4
