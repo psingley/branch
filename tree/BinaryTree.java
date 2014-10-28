@@ -7,6 +7,26 @@ import list.*;
  * 
  * A Binary Tree has a value and two children, each of which is a binary tree.
  * They can be empty.
+ * 
+ * 
+ * Tree Traversal
+ * 
+ * PreOrder
+ * 1)Visit the root value
+ * 2)visit all values in left child
+ * 3)visit all values in right child
+ * 
+ * InOrder
+ * 1)Visit all values in left child
+ * 2)visit root
+ * 3)visit all values in right child
+ * 
+ * PostOrder
+ * 1)visit all values in left child
+ * 2)visit all values in right child
+ * 3)visit all values in root
+ * 
+ * 
  */
 public interface BinaryTree<E>{
 

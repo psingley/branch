@@ -38,15 +38,15 @@ public class EmptyBinarySearchTree<E extends Comparable> implements BinaryTree<E
     }
 
     public BinaryTree<E> remove(Object obj){
-        return null;
+        return this;
     }
 
     public Iterator<E> iterator(){
-        return null;
+        return new EmptyTreeIterator();
     }
 
     public String toString(){
-        return null;
+        return "";
     }
 
     public boolean isEmpty()
@@ -60,4 +60,6 @@ public class EmptyBinarySearchTree<E extends Comparable> implements BinaryTree<E
     {
         return (obj instanceof EmptyBinarySearchTree);
     }
+    
+  
 }

@@ -24,6 +24,7 @@ public class Driver07
         kids = kids.add ("susie");
         kids = kids.add ("joe");
         kids = kids.add ("sue");
+        kids.toString();
 
         if (kids.isEmpty ())
             System.out.println ("Not correct 2");

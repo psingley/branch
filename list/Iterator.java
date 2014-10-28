@@ -29,7 +29,7 @@ public interface Iterator<E>
 
     /** @return true only if there are at least two more elements in the List being iterated thru */
 
-    boolean hasTwoMore( );
+    //boolean hasTwoMore( );
     
       /** Remove two elements from the List,
      *  the most recent obtained by a call to
@@ -37,7 +37,7 @@ public interface Iterator<E>
      *  Pre: There are two such elements which 
      *  can be removed.
      */
-    void remove2( ); 
+    //void remove2( ); 
 
    
 }

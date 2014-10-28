@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Expr\ getLeft()
+comment1.params=
+comment1.target=Expr\ getRight()
+comment2.params=
+comment2.target=java.lang.String\ toString()
+comment3.params=
+comment3.target=Expr\ simplify()
+comment4.params=obj
+comment4.target=boolean\ equals(java.lang.Object)
+numComments=5
