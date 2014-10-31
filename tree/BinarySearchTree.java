@@ -57,7 +57,7 @@ public class BinarySearchTree<E extends Comparable> implements BinaryTree<E> {
     }
 
     public BinaryTree<E> add(E value){
-        int cmp = this.value.compareTo(value);
+        int cmp = value.compareTo(this.value);
 
         if (cmp < 0){
             left = left.add(value);
@@ -70,7 +70,7 @@ public class BinarySearchTree<E extends Comparable> implements BinaryTree<E> {
     }
 
     public boolean containsKey(E value){
-        int cmp = this.value.compareTo(value);
+        int cmp = value.compareTo(this.value);
 
         if (cmp == 0){
             return true;
@@ -90,25 +90,27 @@ public class BinarySearchTree<E extends Comparable> implements BinaryTree<E> {
             int cmp = value.compareTo(this.value);
             if(cmp == 0)
             {
-                List<BinaryTree<E>> kids;
-                kids = children();
+                List<BinaryTree<E>> kids = children();
+                 
                 if(kids.size() == 0)
                     return new EmptyBinarySearchTree<E>();
 
                 if(kids.size() == 1)
                     return kids.get(0);
 
-                //kids.size() == 2
-                BinaryTree<E> successor = ((BinarySearchTree<E>)right).smallest();
+                else if (kids.size()==2)
+                {
+                    BinaryTree<E> successor = ((BinarySearchTree<E>)right).smallest();
 
-                BinaryTree<E> result = remove(successor.getValue());
+                    BinaryTree<E> result = remove(successor.getValue());
 
-                result.setValue(successor.getValue());
+                    result.setValue(successor.getValue());
 
-                return result;
+                    return result;
+                }
             }
 
-            if(cmp<0)
+            else if(cmp<0)
             {
                 left = left.remove(value);
             }
@@ -150,7 +152,7 @@ public class BinarySearchTree<E extends Comparable> implements BinaryTree<E> {
      */
     public String toString(){
 
-        return "values in left are " + left.toString() + "Root BinarySearchTree's values are " + this.value +  "values in right are " + right.toString();
+        return " " + left.toString() + " " + this.value +  " " + right.toString();
     }
 
     public boolean isEmpty()
@@ -168,15 +170,11 @@ public class BinarySearchTree<E extends Comparable> implements BinaryTree<E> {
             localOther = (BinarySearchTree<E>) obj;
             if(value.equals(localOther.getValue()))
             {
-                if(this.getRight().equals(localOther.getRight()) && (this.getLeft().equals(localOther.getLeft())))
-                    return true;
+                return (((this.getRight().equals(localOther.getRight())) && ((this.getLeft().equals(localOther.getLeft())))));
 
             }
-
         } 
-
         return false;
-
     }
 
     private List<BinaryTree<E>> children()

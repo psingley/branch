@@ -1,23 +1,27 @@
 package tree;
 
 /**
- * Write a description of class Quotient here.
+ * Write a description of class Mod here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Quotient implements Expr
+public class Mod implements Expr
 {
     Expr left,right;
+    Expr zero;
+    Expr one;
 
     /**
-     * Constructor for objects of class Quotient
+     * Constructor for objects of class Mod
      */
-    public Quotient(Expr left,Expr right)
+    public Mod(Expr left,Expr right)
     {
         
         this.left = left;
         this.right = right;
+         zero = new Constant(0);
+         one = new Constant(1);
     
     }
 
@@ -33,7 +37,7 @@ public class Quotient implements Expr
     
     public String toString()
     {
-        return "(" + left + "/" + right + ")";
+        return "(" + left + "%" + right + ")";
     }
     
     public Expr simplify()
@@ -41,8 +45,12 @@ public class Quotient implements Expr
         left  = left.simplify();
         right = right.simplify();
         
+        
         if (left.equals(right))
-        return new Constant(1);
+        return zero;
+        
+        if (right.equals(one))
+        return zero;
         
         return this;
         
@@ -50,13 +58,13 @@ public class Quotient implements Expr
     
     public boolean equals(Object obj)
     {
-        if(!(obj instanceof Quotient))
+        if(!(obj instanceof Mod))
         return false;
         
-        Quotient other = (Quotient) obj;
+        Mod other = (Mod) obj;
         
         
-        return (left.equals(other.left) && right.equals(other.right));
+        return (this.getLeft().equals(other.getLeft()) && this.getRight().equals(other.getRight()));
     }
     
     public int eval ( )

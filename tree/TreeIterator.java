@@ -14,24 +14,28 @@ public class TreeIterator<E extends Comparable> implements Iterator<E>
 {
 
     BinaryTree<E> tree;
-    QueueADT q;
+    QueueADT<E> q;
     E last; //last value obtained by next.
 
     TreeIterator(BinaryTree<E> tree)
     {
+        q = new Queue();
         this.tree = tree;
         buildQ(tree);
+         
     }
 
     private void buildQ(BinaryTree<E> tree)
     {
+        q.add(tree.getValue()); //PreOrder traversal
         if(tree.getLeft() instanceof BinarySearchTree)
             buildQ(tree.getLeft());
 
-        q.add(tree.getValue());
+        //q.add(tree.getValue()); //InOrder traversal 
 
         if(tree.getRight() instanceof BinarySearchTree)
             buildQ(tree.getRight());
+        //q.add(tree.getValue()); //PostOrder traversal 
 
     }
 
@@ -40,9 +44,9 @@ public class TreeIterator<E extends Comparable> implements Iterator<E>
 
     public E next()
     {
-        //last = q.remove();
-        //return last;
-        return null;
+        last = q.remove();
+        return last;
+        
     }
 
     public void remove()

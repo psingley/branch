@@ -1,6 +1,5 @@
 package tree;
 
-
 /**
  * Write a description of class Expr here.
  * 
@@ -9,14 +8,17 @@ package tree;
  */
 public interface Expr
 {
-   Expr getLeft();
-   
-   Expr getRight();
-   
-   String toString();
-   
-   Expr simplify();
-   
-   boolean equals(Object obj);
-   
+    Expr getLeft();
+
+    Expr getRight();
+
+    String toString();
+
+    Expr simplify();
+
+    boolean equals(Object obj);
+
+    /** @return the value of this Expr if it is a Constant */
+
+    int eval ( );
 }

@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=name
+comment0.target=Variable(char)
+comment1.params=
+comment1.target=Expr\ getLeft()
+comment2.params=
+comment2.target=Expr\ getRight()
+comment3.params=
+comment3.target=java.lang.String\ toString()
+comment4.params=
+comment4.target=Expr\ simplify()
+comment5.params=
+comment5.target=int\ eval()
+comment6.params=obj
+comment6.target=boolean\ equals(java.lang.Object)
+numComments=7

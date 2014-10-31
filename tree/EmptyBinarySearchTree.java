@@ -42,7 +42,7 @@ public class EmptyBinarySearchTree<E extends Comparable> implements BinaryTree<E
     }
 
     public Iterator<E> iterator(){
-        return new EmptyTreeIterator();
+        return new EmptyTreeIterator(this);
     }
 
     public String toString(){

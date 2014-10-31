@@ -15,8 +15,9 @@ public class EmptyTreeIterator<E extends Comparable> extends TreeIterator<E>
     /**
      * Constructor for objects of class asdf
      */
-    public EmptyTreeIterator()
+    public EmptyTreeIterator(BinaryTree<E> tree)
     {
+        super(tree);
     }
     
     public boolean hasNext()
@@ -29,8 +30,8 @@ public class EmptyTreeIterator<E extends Comparable> extends TreeIterator<E>
         return null;
     }
     
-    public E remove()
+    public void remove()
     {
-        return null;
+        
     }
 }
