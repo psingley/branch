@@ -64,14 +64,7 @@ public class Lab08
         if (e1.equals (e2))
             System.out.println ("Not correct");
 
-        Expr z = new Product ( new Variable('x'), new Constant(0));                    //   x * 0
-        System.out.println (z);
-        z.simplify();
-        System.out.println (z);
-        z = new Product ( new Variable('k'), new Constant(1));
-        System.out.println (z);
-        z.simplify();
-        System.out.println (z);
+       
         
     }
 }

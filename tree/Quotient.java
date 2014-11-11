@@ -41,7 +41,7 @@ public class Quotient implements Expr
         left  = left.simplify();
         right = right.simplify();
         
-        if (left.equals(right))
+        if (left.eval()==right.eval())
         return new Constant(1);
         
         return this;
@@ -61,6 +61,6 @@ public class Quotient implements Expr
     
     public int eval ( )
     {
-        return 0;
+        return left.eval() / right.eval();
     }
 }

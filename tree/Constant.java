@@ -37,12 +37,13 @@ public class Constant implements Expr
     public Expr simplify()
     {
 
+        this.eval();
         return this;
     }
 
     public int eval ( )
     {
-        return 0;
+        return value;
     }
 
     public int getValue()

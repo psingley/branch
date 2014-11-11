@@ -38,14 +38,18 @@ public class Sum implements Expr
     {
         left = left.simplify();
         right = right.simplify();
-        if(left.equals(right))
+        
+        if(left.eval() == right.eval())
             return new Product (new Constant(2),left);
-            
-           // else if (left instanceof Constant && ((Constant)left).getValue))
-            
-            return this;
+
+        if(left.eval()==0)return right;
+        if(right.eval()==0)return left;
+        // else if (left instanceof Constant && ((Constant)left).getValue))
+
+        return this;
 
     }
+
     public boolean equals(Object obj)
     {
         if(!(obj instanceof Sum))
@@ -58,11 +62,17 @@ public class Sum implements Expr
 
     public int eval ( )
     {
+        /*
+         * 
+        
         if(left instanceof Constant && right instanceof Constant)
         {
-            return ((Constant)left).getValue() + ((Constant)right).getValue();
+        return ((Constant)left).getValue() + ((Constant)right).getValue();
         }
-        return 1;
+                   */
+
+        //return 1;
+        return left.eval() + right.eval();
     }
 
 }

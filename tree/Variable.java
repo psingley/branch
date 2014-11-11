@@ -30,6 +30,7 @@ public class Variable implements Expr
 
     public Expr simplify()
     {
+        this.eval();
         return this;
     }
 

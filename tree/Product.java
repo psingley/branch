@@ -42,18 +42,18 @@ public class Product implements Expr
     {
         left = left.simplify();
         right = right.simplify();
-        if((left).equals(zero))
+        if(left.eval()==0)
             return zero;
 
-        if(right.equals(zero))
+        if(right.eval()==0)
             return zero;
 
-
-        if(left.equals(one))
+        if(left.eval()==1)
             return right;
 
-        if(right.equals(one))
+        if(right.eval()==1)
             return left;
+
         return this;
     }
 
@@ -69,7 +69,7 @@ public class Product implements Expr
 
     public int eval ( )
     {
-        return 0;
+        return left.eval() * right.eval();
     }
 
 }

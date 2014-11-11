@@ -38,9 +38,13 @@ public class Difference implements Expr
     {
         left = left.simplify();
         right = right.simplify();
-        if(left.equals(right))
+        
+        if(left.eval()==(right.eval()))
             return new Constant(0);
+        if(left.equals(0))return right;
+        if(right.equals(0))return left;
 
+        
         return this;
 
     }
@@ -51,13 +55,13 @@ public class Difference implements Expr
             return false;
 
         Difference other = (Difference)obj;
-        return left.equals(other.left) && right.equals(other.right) || right.equals(other.right) && left.equals(other.left);
+        return left.equals(other.left) && right.equals(other.right);
 
     }
 
     public int eval ( )
     {
-        return 0;
+        return left.eval() - right.eval();
     }
 
 }

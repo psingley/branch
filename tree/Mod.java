@@ -46,10 +46,10 @@ public class Mod implements Expr
         right = right.simplify();
         
         
-        if (left.equals(right))
+        if (left.eval()==right.eval())
         return zero;
         
-        if (right.equals(one))
+        if (right.eval()==1)
         return zero;
         
         return this;
@@ -69,6 +69,6 @@ public class Mod implements Expr
     
     public int eval ( )
     {
-        return 0;
+        return left.eval() % right.eval();
     }
 }
