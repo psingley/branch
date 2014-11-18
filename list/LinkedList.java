@@ -218,7 +218,7 @@ public class LinkedList<E> implements List<E>
             ref = ref.next;
         }
 
-        result = result + "|||" + "\n";
+        result = result + " " + "\n";
         return result;
     }
 

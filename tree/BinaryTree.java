@@ -98,4 +98,10 @@ public interface BinaryTree<E>{
     /** @return true only if this BinaryTree is equal to the given obj */
 
     boolean equals (Object obj);
+
+    /**  @return An Iterator for this BinaryTree which will visit the values in reverse natural
+
+    order */
+
+    Iterator<E> iteratorReverse( ) ;
 }

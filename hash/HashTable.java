@@ -10,7 +10,8 @@ import list.*;
 public class HashTable<K>
 {
 
-    List <List<K>> list;
+    List <List<K>> list = new ArrayList();
+    
 
     int keyCount = 0;
 
@@ -109,26 +110,47 @@ public class HashTable<K>
         }
 
     }
+
     public void clear()
     {
         for(int i=0; i<list.size();i++)
         {
             list.get(i).clear();
         }
-        
+
         keyCount=0;
 
     }
-    
+
     public Iterator<K> iterator()
     {
-    
+
         return new
         TableIterator<K>(this);
+
+    }
+
+    public String toString()
+    {
+        TableIterator<K> itty = new TableIterator<K>(this);
+        
+        String s = "";
+        while(itty.hasNext()){
+           s = s + "," + itty.next().toString();
+        }
+        
+        return s;
+
         
     }
     
-    
-    
-    
+    public boolean isEmpty()
+    {
+        return keyCount==0;
+    }
+
+    public int size()
+    {
+        return keyCount;
+    }
 }

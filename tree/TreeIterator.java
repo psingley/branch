@@ -17,12 +17,12 @@ public class TreeIterator<E extends Comparable> implements Iterator<E>
     QueueADT<E> q;
     E last; //last value obtained by next.
 
-    TreeIterator(BinaryTree<E> tree)
+    public TreeIterator(BinaryTree<E> tree)
     {
         q = new Queue();
         this.tree = tree;
         buildQ(tree);
-         
+
     }
 
     private void buildQ(BinaryTree<E> tree)
@@ -46,7 +46,7 @@ public class TreeIterator<E extends Comparable> implements Iterator<E>
     {
         last = q.remove();
         return last;
-        
+
     }
 
     public void remove()
@@ -57,7 +57,7 @@ public class TreeIterator<E extends Comparable> implements Iterator<E>
             tree.setLeft(temp.getLeft());
             tree.setRight(temp.getRight());
         }
-        
+
         else tree = tree.remove(last);
     }
 

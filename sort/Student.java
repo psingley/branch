@@ -26,16 +26,24 @@ public class Student implements Comparable<Student>
     {
         return name;
     }
+    
+    public String getSsn()
+    {
+        return ssn;
+    }
 
     public int compareTo(Student s)
     {
         String a = s.getName();
         String b = this.getName();
 
-        return (a.compareTo(b));
-        
+        if(a.compareTo(b)==0)
+            return s.getSsn().compareTo(this.getSsn());
+
+        return a.compareTo(b);
+
     }
-   
+
     public String toString()
     {
 
@@ -43,4 +51,27 @@ public class Student implements Comparable<Student>
 
     }
 
+    public int hashCode()
+    {
+        int result = 17;
+        result+=result*37+name.hashCode();
+        result+=result*37+ssn.hashCode();
+        return result;
+    }
+
+    public  boolean equals (Object other)
+    {
+        Student localOther;
+        
+        if(other instanceof Student)
+        {
+            localOther = (Student) other;
+            if(name.equals(localOther.getName())){
+                return ssn.equals(localOther.getSsn());
+            }
+            
+        }
+        
+        return false;
+    }
 }

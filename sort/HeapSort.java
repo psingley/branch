@@ -37,10 +37,14 @@ public class HeapSort <E extends Comparable>
         {
             return;//no children
         }
+        
+        System.out.println(""+root);
 
         heapify(2*root+1);//left child
         heapify(2*root+2);//right child
         percDown(root,list.size()-1);
+        
+        
 
     }
 
@@ -75,7 +79,7 @@ public class HeapSort <E extends Comparable>
 
     private boolean greater(int x, int y)
     {
-        return list.get(x).compareTo(list.get(y))>0;
+        return list.get(x).compareTo(list.get(y))<0;
 
     }
     

@@ -8,7 +8,7 @@ import tree.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class TreeSet<E> implements Set<E>
+public class TreeSet<E extends Comparable> implements Set<E>
 {
 
     BinaryTree<E> tree;
@@ -42,13 +42,10 @@ public class TreeSet<E> implements Set<E>
 
     public boolean isEmpty()
     {
-        empty = new EmptyBinarySearchTree<E>();
+        EmptyBinarySearchTree empty = new EmptyBinarySearchTree<E>();
 
-        if(tree.equals(empty))
-            return false;
-
-        return true;
-
+        return tree.equals(empty);
+          
     }
 
     public boolean contains(Object obj)
@@ -96,13 +93,13 @@ public class TreeSet<E> implements Set<E>
     
     public int size()
     {
-        return tree.size();
+        return size;
     }
     
     public Iterator<E> iterator()
     {
         
-        return new TreeSetIterator<E>();
+        return new TreeSetIterator(this);
         
     }
 

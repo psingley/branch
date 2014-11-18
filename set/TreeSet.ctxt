@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.params=
+comment0.target=TreeSet()
+comment1.params=value
+comment1.target=boolean\ add(java.lang.Comparable)
+comment10.params=
+comment10.target=list.Iterator\ iterator()
+comment2.params=
+comment2.target=void\ clear()
+comment3.params=
+comment3.target=boolean\ isEmpty()
+comment4.params=obj
+comment4.target=boolean\ contains(java.lang.Object)
+comment5.params=obj
+comment5.target=boolean\ remove(java.lang.Object)
+comment6.params=
+comment6.target=java.lang.String\ toString()
+comment7.params=obj
+comment7.target=boolean\ equals(java.lang.Object)
+comment8.params=
+comment8.target=int\ hashCode()
+comment9.params=
+comment9.target=int\ size()
+numComments=11

@@ -16,7 +16,7 @@ public class Expon
         Expon t = new Expon();
         t.meth(n);
         
-        
+        result.add(it.next().key);
 
     }
 

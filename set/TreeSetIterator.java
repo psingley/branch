@@ -9,11 +9,11 @@ import list.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class TreeSetIterator<E>  extends TreeIterator<E> implements Iterator<E> 
+public class TreeSetIterator <E extends Comparable> extends TreeIterator <E>
 {
     
-    Set<E> set;
-    public TreeSetIterator(Set<E> set)
+    TreeSet<E> set;
+    public TreeSetIterator(TreeSet<E> set)
     {
         super(set.tree);
         this.set = set;

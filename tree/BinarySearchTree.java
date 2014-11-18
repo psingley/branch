@@ -146,6 +146,13 @@ public class BinarySearchTree<E extends Comparable> implements BinaryTree<E> {
     {
         return new TreeIterator(this);
     }
+    
+    public Iterator<E> iteratorReverse()
+    {
+        
+        return new ReverseTreeIterator(this);
+        
+    }
 
     /**
      * InOrder traversal used here

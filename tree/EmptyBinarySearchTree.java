@@ -44,6 +44,14 @@ public class EmptyBinarySearchTree<E extends Comparable> implements BinaryTree<E
     public Iterator<E> iterator(){
         return new EmptyTreeIterator(this);
     }
+    
+    public Iterator<E> iteratorReverse()
+    {
+        
+        return new ReverseTreeIterator(this);
+        
+    }
+
 
     public String toString(){
         return "";

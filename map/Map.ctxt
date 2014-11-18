@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.params=key\ value
+comment0.target=java.lang.Object\ put(java.lang.Object,\ java.lang.Object)
+comment0.text=\r\n\ Add\ the\ given\ key-value\ pair\ to\ this\ map.\r\n\ If\ the\ key\ is\ already\ in\ this\ map,\ change\ its\ value.\r\n\ @return\ the\ old\ value,\ or\ null\ if\ not\ in\ map\r\n
+comment1.params=key
+comment1.target=java.lang.Object\ get(java.lang.Object)
+comment1.text=\r\n\ @return\ The\ value\ for\ the\ given\ key,\ or\ null\ if\ not\ in\ this\ map\r\n
+comment2.params=key
+comment2.target=boolean\ containsKey(java.lang.Object)
+comment2.text=\r\n\ @return\ true\ only\ if\ this\ map\ contains\ an\ entry\ with\ the\ given\ key\r\n
+comment3.params=
+comment3.target=boolean\ isEmpty()
+comment3.text=\r\n\ @return\ true\ if\ this\ Map\ is\ Empty\r\n
+comment4.params=key
+comment4.target=java.lang.Object\ remove(java.lang.Object)
+comment4.text=\r\n\ Remove\ the\ entry\ with\ given\ Key\ from\ this\ Map\r\n\ @return\ its\ value,\ or\ null\ if\ not\ in\ this\ Map\r\n
+comment5.params=
+comment5.target=int\ size()
+comment5.text=\r\n\ @return\ the\ number\ of\ entries\ in\ this\ Map\r\n
+comment6.params=
+comment6.target=java.lang.String\ toString()
+comment7.params=
+comment7.target=set.Set\ keySet()
+comment7.text=\r\n\ Return\ a\ set\ of\ all\ keys\ in\ this\ Map\r\n
+numComments=8
